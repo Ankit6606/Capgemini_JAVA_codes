@@ -10,7 +10,7 @@ public class DriverMain {
 		A a = new C();
 		System.out.println(a instanceof A);
 		System.out.println(a instanceof B);
-		System.err.println(a instanceof C);
+		System.out.println(a instanceof C);
 		System.out.println(a instanceof D);
 //		System.out.println(a instanceof E);
 	}
