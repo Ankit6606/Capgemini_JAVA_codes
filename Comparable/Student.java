@@ -1,7 +1,7 @@
 
 package Comparable;
 import java.lang.*;
-public class Student implements Comparable {
+public class Student implements Comparable<Student> {
 	int rollno;
 	String name;
 	double percentage;
@@ -16,8 +16,8 @@ public class Student implements Comparable {
 		return rollno+"\t"+name+"\t"+percentage;
 	}
 	@Override
-	public int compareTo(Object o) {
-		Student s = (Student)o;
+	public int compareTo(Student s) {
+//		Student s = (Student)o;
 		return Double.compare(s.percentage, this.percentage);
 	}
 }
