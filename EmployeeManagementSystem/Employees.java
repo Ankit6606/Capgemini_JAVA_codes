@@ -92,7 +92,7 @@ public class Employees {
 	
 	//By ID
 	public static void sort() {
-		ArrayList<Employee> temp = null;
+		ArrayList<Employee> temp = emp_list;
 		Collections.sort(temp);
 		System.out.println("Employee list is sorted(default by id)");
 	}
@@ -107,9 +107,8 @@ public class Employees {
 	}
 	
 	public static void sortbysalary() {
-		SortBySalary ssalary = new SortBySalary();
 //		Collections.sort(emp_list, sid);
-		emp_list.sort(ssalary);
+		emp_list.sort(new SortBySalary());
 		System.out.println("Employee list sorted(by salary)");
 	}
 	
@@ -123,8 +122,7 @@ public class Employees {
 	}
 	
 	public static void sortbyname() {
-		SortByName sname = new SortByName();
-		Collections.sort(emp_list, sname);
+		Collections.sort(emp_list, new SortByName());
 		System.out.println("Employee list sorted(by name)");
 	}
 }

@@ -77,8 +77,8 @@ public class EmpployeeManagementSysttemDriver {
 			}
 			case 8:{
 				Employees.sort();
-				Employees.sortbysalary();
-				Employees.sortbyname();
+//				Employees.sortbysalary();
+//				Employees.sortbyname();
 				Employees.printAllEmployees();
 				break;
 			}
