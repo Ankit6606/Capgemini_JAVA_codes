@@ -7,7 +7,7 @@ public class Treemap {
 		t.put(20, "Integer");
 		t.put(3, "Null");
 		t.put(5, "Number");
-		t.put(3, "Char");
+		t.put(3, "Char");//Updates the value of key-3 as "Char"
 		t.put(4, "Double");
 		Set<Integer> s = t.keySet();
 		for(int key : s) {

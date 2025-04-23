@@ -1,5 +1,3 @@
-
-
 package stringprog;
 
 import java.util.Scanner;
