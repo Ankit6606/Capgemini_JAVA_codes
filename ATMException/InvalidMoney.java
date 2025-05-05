@@ -1,7 +1,7 @@
 
 package ATMException;
 
-public class InvalidMoney extends RuntimeException{
+public class InvalidMoney extends Exception{// Checked exception throwing
 	private static String message = "Can't withdraw money";
 	InvalidMoney(){
 		super(message);

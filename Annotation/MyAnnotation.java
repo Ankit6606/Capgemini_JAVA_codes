@@ -1,6 +1,6 @@
 package Annotation;
 
-import java.lang.annotation.ElementType;
+import java.lang.annotation.ElementType; 
 import java.lang.annotation.*;
 
 @Target({ ElementType.FIELD, ElementType.METHOD, ElementType.TYPE})

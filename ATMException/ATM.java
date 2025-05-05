@@ -13,7 +13,7 @@ public class ATM {
 	public int getPin() {
 		return pin;
 	}
-	void withdraw(double money, int pin) {
+	void withdraw(double money, int pin) throws InvalidMoney  {
 		if(money<=0)
 			throw new InvalidMoney();
 		if(pin != getPin())
