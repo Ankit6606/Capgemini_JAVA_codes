@@ -223,3 +223,80 @@ protected void finalize() throws Throwable {
 | `final`     | Modifier | Prevents changes                 | Compile-time                   | `final int x = 10;`           |
 | `finally`   | Block    | Cleanup after try/catch          | Always, after try/catch block  | `finally { close(); }`        |
 | `finalize()`| Method   | Cleanup before GC (deprecated)   | Before object destruction      | `protected void finalize()`   |
+
+# 🔒 Encapsulation vs 🔍 Abstraction in Java
+
+Both **Encapsulation** and **Abstraction** are core concepts of Object-Oriented Programming (OOP), but they serve different purposes.
+
+---
+
+## 🧩 What is Abstraction?
+
+**Abstraction** is the process of hiding the internal implementation details and showing only the functionality.
+
+### Key Points:
+- Focuses on **what** an object does, not **how** it does it.
+- Achieved using **abstract classes** and **interfaces** in Java.
+- Helps reduce complexity by hiding unnecessary implementation.
+
+### Example:
+```java
+abstract class Animal {
+    abstract void sound();
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+```
+
+---
+
+## 🔐 What is Encapsulation?
+
+**Encapsulation** is the technique of wrapping data (variables) and methods that operate on that data into a single unit (class). It also restricts direct access to some of the object's components.
+
+### Key Points:
+- Focuses on **how** data is protected.
+- Achieved using **private fields** and **public getters/setters**.
+- Improves security and modularity.
+
+### Example:
+```java
+public class Person {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String newName) {
+        if (newName != null) {
+            name = newName;
+        }
+    }
+}
+```
+
+---
+
+## 🔄 Comparison Table
+
+| Feature              | Encapsulation                              | Abstraction                                 |
+|----------------------|---------------------------------------------|----------------------------------------------|
+| **Definition**        | Wrapping data and methods together          | Hiding implementation and showing interface  |
+| **Focus**             | Data hiding and protection                  | Functionality hiding                         |
+| **Access Modifiers**  | Uses `private`, `public`, etc.              | Uses `abstract` classes or `interface`       |
+| **Goal**              | Protect object integrity                    | Simplify interface, reduce complexity        |
+| **How Achieved**      | Getters and setters                         | Abstract classes & interfaces                |
+| **Use Case**          | When controlling access is needed           | When designing a system interface            |
+
+---
+
+## 🧠 Summary
+
+- **Encapsulation** is about *protecting* data.
+- **Abstraction** is about *hiding* details.
+- Both aim to make software more secure, modular, and maintainable.
